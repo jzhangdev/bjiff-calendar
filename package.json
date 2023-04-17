@@ -1,0 +1,27 @@
+{
+  "name": "bjiff-calendar",
+  "version": "1.0.0",
+  "description": "Generate BJIFF calendar",
+  "scripts": {
+    "start": "ts-node --esm ./src/index.ts"
+  },
+  "keywords": [
+    "bjiff"
+  ],
+  "author": "jzhangdev<zhangjie9477@gmail.com>",
+  "type": "module",
+  "devDependencies": {
+    "@types/date-fns": "^2.6.0",
+    "@types/got": "^9.6.12",
+    "@types/node": "^18.15.11",
+    "add": "^2.0.6",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "date-fns": "^2.29.3",
+    "got": "^12.6.0",
+    "ics": "^3.1.0",
+    "p-queue": "^7.3.4"
+  }
+}

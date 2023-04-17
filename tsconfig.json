@@ -1,0 +1,19 @@
+{
+  "ts-node": {
+		"transpileOnly": true,
+		"files": true,
+		"experimentalResolver": true
+	},
+  "include": [
+    "src"
+  ],
+  "compilerOptions": {
+    "lib": [
+      "ESNext"
+    ],
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "module": "Node16",
+    "moduleResolution": "node16"
+  }
+}
