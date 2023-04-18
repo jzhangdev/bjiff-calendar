@@ -3,7 +3,7 @@ import * as ics from 'ics';
 import { format, fromUnixTime } from 'date-fns'
 import { DateArray } from "ics";
 import PQueue from 'p-queue';
-import { writeFileSync, rmSync, existsSync } from 'fs';
+import fs from 'fs-extra'
 
 interface MovieData {
   id: string;
@@ -95,16 +95,15 @@ const generateEventData = (movieSchedule: MovieScheduleData): ics.EventAttribute
     });
   });
 
-  queue.on('idle', () => {
+  queue.on('idle', async () => {
     const generatedEvents = ics.createEvents(allSchedules.map((schedule) => generateEventData(schedule)));
     if (generatedEvents.error) {
       throw generatedEvents.error;
     } else {
-      const filename = 'bjiff.ics';
-      if (existsSync(filename)) {
-        rmSync(filename);
-      }
-      writeFileSync(filename, generatedEvents.value);
+      const outputDir = './dist';
+      const outputFilename = 'bjiff.ics';
+      await fs.emptyDir(outputDir);
+      await fs.writeFile(`${outputDir}/${outputFilename}`, generatedEvents.value);
     }
   });
 })();
