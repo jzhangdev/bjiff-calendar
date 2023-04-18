@@ -1,7 +1,7 @@
 {
   "name": "bjiff-calendar",
   "version": "1.0.0",
-  "description": "Generate BJIFF calendar",
+  "description": "Calendar Generation for Beijing Film Festival Scheduling",
   "scripts": {
     "build": "ts-node --esm ./src/index.ts"
   },
