@@ -75,6 +75,7 @@ const generateEventData = (movieSchedule: MovieScheduleData): ics.EventAttribute
   categories: [movieSchedule.cinemaName],
   status: 'CONFIRMED',
   busyStatus: 'BUSY',
+  location: `${movieSchedule.cinemaName} ${movieSchedule.cinemaAddress}`,
 });
 
 (async () => {
