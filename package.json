@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Calendar Generation for Beijing Film Festival Scheduling",
   "scripts": {
-    "build": "ts-node --esm ./src/index.ts"
+    "build": "tsx ./src/index.ts"
   },
   "keywords": [
     "bjiff"
@@ -11,18 +11,18 @@
   "author": "jzhangdev<zhangjie9477@gmail.com>",
   "type": "module",
   "devDependencies": {
-    "@types/fs-extra": "^11.0.1",
+    "@types/fs-extra": "^11.0.4",
     "@types/got": "^9.6.12",
-    "@types/node": "^18.15.11",
+    "@types/node": "20",
     "add": "^2.0.6",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.0.4"
+    "tsx": "^4.1.1",
+    "typescript": "^5.2.2"
   },
   "dependencies": {
-    "date-fns": "^2.29.3",
+    "date-fns": "^2.30.0",
     "fs-extra": "^11.1.1",
-    "got": "^12.6.0",
-    "ics": "^3.1.0",
-    "p-queue": "^7.3.4"
+    "got": "^12.6.1",
+    "ics": "^3.5.0",
+    "p-queue": "^7.4.1"
   }
 }
